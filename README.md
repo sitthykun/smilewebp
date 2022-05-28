@@ -1,9 +1,12 @@
 # smilewebp
-webp image library for python3
+The first version 1.0.0.\
+Webp image library for python3.
 
 # Download
 ### Find package
 - https://developers.google.com/speed/webp/download
+
+# Install directly in Ubuntu
 
 # Find
 ```commandline
@@ -14,7 +17,6 @@ $ /usr/bin/cwebp
 # Start to code
 ```
 from smilewebp.Webp import Webp
-
 # initialize
 smile    = Webp()
 or
