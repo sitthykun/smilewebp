@@ -1,6 +1,6 @@
 """
 Author: masakokh
-Version: 1.0.0
+Version: 1.0.1
 Note:
 """
 import os
@@ -64,7 +64,7 @@ class Webp:
 			# todo
 			# put in try catch
 			try:
-				# if no newFilename and dirname
+				# if no newFilename and newDirname
 				needRemove		= False
 				tempFileMove	= ''
 
