@@ -1,10 +1,9 @@
 """
 Author: masakokh
-Version: 1.0.0
+Version: 1.0.1
 Note:
 """
 import os
-from typing import Any
 # internal
 from Error import Error
 
@@ -51,21 +50,21 @@ class Webp:
 			self.error.setError('The cwebp sdk path\'s not found.')
 			return False
 
-	def convert(self, filename: str, quality: int= 100, newFilename: str= '', dirname: str= '') -> None:
+	def convert(self, filename: str, quality: int= 100, newFilename: str= '', newDirname: str= '') -> None:
 		"""
 
 		:param filename:
 		:param quality:
 		:param newFilename:
-		:param dirname:
+		:param newDirname:
 		:return:
 		"""
 		# verify sdk path
-		if self.__foundPngQuantSDKPath():
+		if self.__foundSDKPath():
 			# todo
 			# put in try catch
 			try:
-				# if no newFilename and dirname
+				# if no newFilename and newDirname
 				needRemove		= False
 				tempFileMove	= ''
 
@@ -86,19 +85,19 @@ class Webp:
 					self.__quality	= quality
 
 					# need removing
-					if newFilename and dirname:
+					if newFilename and newDirname:
 						# make sure no backslash at the end
-						self.__filename	= f'{os.path.dirname(dirname)}/{newFilename}.{self.__extension}'
+						self.__filename	= f'{os.path.dirname(newDirname)}/{newFilename}.{self.__extension}'
 
 					elif newFilename:
 						# set new filename and keep it
 						self.__filename	= f'{os.path.dirname(filename)}/{newFilename}.{self.__extension}'
 
-					elif dirname:
+					elif newDirname:
 						# the same directory
-						if os.path.dirname(dirname) == os.path.dirname(filename):
+						if os.path.dirname(newDirname) == os.path.dirname(filename):
 							# name with extension
-							self.__filename = f'{os.path.dirname(dirname)}/{os.path.basename(filename)}_new.{self.__extension}'
+							self.__filename = f'{os.path.dirname(newDirname)}/{os.path.basename(filename)}_new.{self.__extension}'
 							# remove the exists
 							needRemove = True
 							# move the exist file
@@ -113,7 +112,7 @@ class Webp:
 
 						else:
 							# name with extension
-							self.__filename	= f'{os.path.dirname(dirname)}/{os.path.basename(filename)}'
+							self.__filename	= f'{os.path.dirname(newDirname)}/{os.path.basename(filename)}'
 
 					else:
 						# override current file
