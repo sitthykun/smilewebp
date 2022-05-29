@@ -6,13 +6,21 @@ Webp image library for python3.
 ### Find package
 - https://developers.google.com/speed/webp/download
 
-# Install directly in Ubuntu
+### Or download any from smile-thirst-party
+There are some versions which compacts some OS such as Mac, Ubuntu, ..etc
+- https://github.com/sitthykun/smile-thirst-party
 
 # Find
 ```commandline
 which cwebp
 ```
 $ /usr/bin/cwebp
+
+# Check version
+```commandline
+cwebp -version
+```
+$ 0.6.1
 
 # Start to code
 ```
