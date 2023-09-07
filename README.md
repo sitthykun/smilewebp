@@ -1,7 +1,7 @@
 # smilewebp
 What's new 1.0.1
 - fix bug
-- update doc with smile-thirst-party
+- update doc with smile-third-party
 
 The first version 1.0.0.\
 Webp image library for python3.
