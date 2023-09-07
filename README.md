@@ -10,9 +10,9 @@ Webp image library for python3.
 ### Find package
 - https://developers.google.com/speed/webp/download
 
-### Or download any from smile-thirst-party
+### Or download any from smile-third-party
 There are some versions which compacts some OS such as Mac, Ubuntu, ..etc
-- https://github.com/sitthykun/smile-thirst-party
+- https://github.com/sitthykun/smile-third-party
 
 # Find
 ```commandline
