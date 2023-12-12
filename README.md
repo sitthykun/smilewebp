@@ -30,14 +30,13 @@ $ 0.6.1
 ```
 from smilewebp.Webp import Webp
 # initialize
-smile    = Webp()
-or
 smile    = Webp('/usr/bin/cwebp')
 ```
 *** by default the application located in /usr/bin/cwebp
 
 *** it's able to set to another location via
 ```
+smile    = Webp()
 smile.setWebp(path= '/usr/bin/cwebp')
 ```
 
